@@ -5,21 +5,21 @@
 class SkateIpsum < Formula
   desc "Skate Ipsum is a tool for generating random skateboarding related text."
   homepage "https://github.com/madflow/skate-ipsum"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.5/skate-ipsum_Darwin_arm64.tar.gz"
-      sha256 "9d52fc5a503efd83de27c40ac62f76e54be5bf43af8b2b028cc836d63bef60c8"
+      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.6/skate-ipsum_Darwin_arm64.tar.gz"
+      sha256 "6fdcbe256ee40333d5cd44744fd9168ddd49cea27c3ed9e284cb3a2ea3836218"
 
       def install
         bin.install "skate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.5/skate-ipsum_Darwin_x86_64.tar.gz"
-      sha256 "898615b811c1e501b81d8d1131178101c704fc0b0f4ae43d3c5baaa7fc8129ec"
+      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.6/skate-ipsum_Darwin_x86_64.tar.gz"
+      sha256 "52a098f417845b83b8d0782b9e68248bca9f035b1a4e7f3d385a0aa4450feb39"
 
       def install
         bin.install "skate"
@@ -29,16 +29,16 @@ class SkateIpsum < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.5/skate-ipsum_Linux_arm64.tar.gz"
-      sha256 "0b359bfc0bcd54130093e8d381806052d447f16336867adae19324a6ff79c2d3"
+      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.6/skate-ipsum_Linux_arm64.tar.gz"
+      sha256 "3612df724eba4cfd327744c282ed7dea37652de21a919a90757f5bc0a760fa52"
 
       def install
         bin.install "skate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.5/skate-ipsum_Linux_x86_64.tar.gz"
-      sha256 "7d428bdc10f88adc67cfe788e93a3bd2627230c1b612bf9bb1866b2de8136456"
+      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.6/skate-ipsum_Linux_x86_64.tar.gz"
+      sha256 "41b28a7a8f588180a15b88578714d00dd01a90f597643b1188e6bcbc378dcd44"
 
       def install
         bin.install "skate"
