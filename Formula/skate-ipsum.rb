@@ -11,7 +11,7 @@ class SkateIpsum < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.8/skate-ipsum_Darwin_x86_64.tar.gz"
-      sha256 "c2c8d029a6d44dabc83d2072214feb15dff1a35704d624185dae70d3f0eeb104"
+      sha256 "e62b1e23e8e359fb8f881ba2e71df8586953e49d2a8650f25cd31685ffd75770"
 
       def install
         bin.install "skate"
@@ -19,7 +19,7 @@ class SkateIpsum < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.8/skate-ipsum_Darwin_arm64.tar.gz"
-      sha256 "912f0153539de2459973ac07573d16e47434ccad907848358896d6642fc603ff"
+      sha256 "9a6941de24794dc71813850c8d6b95d8d946ff4930f6c44a01f2d7562e2264cd"
 
       def install
         bin.install "skate"
@@ -28,17 +28,17 @@ class SkateIpsum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.8/skate-ipsum_Linux_arm64.tar.gz"
-      sha256 "af0461116c19b5a94a724ef5305a4bcbe90cfbd4a4a746680a28967187d3f977"
+    if Hardware::CPU.intel?
+      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.8/skate-ipsum_Linux_x86_64.tar.gz"
+      sha256 "c13c1674efd116596efcb9d9a7e1b97d9ff382a37e9cdf6b6c378f5643c934d3"
 
       def install
         bin.install "skate"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.8/skate-ipsum_Linux_x86_64.tar.gz"
-      sha256 "123e6dbbfecb274eb6640ae5ad95ecb7950c8860d7dc7cfea3d95d7b49ff8275"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/madflow/skate-ipsum/releases/download/v0.0.8/skate-ipsum_Linux_arm64.tar.gz"
+      sha256 "a1126f9ae7ef1629da68c3518bd936d9d89e82517f68edf31688fa3b9c51156f"
 
       def install
         bin.install "skate"
